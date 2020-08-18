@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/main_home_fragment">
+
+    <fragment
+        android:id="@+id/main_home_fragment"
+        android:name="com.webronin_26.shopping.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" />
+
+    <fragment
+        android:id="@+id/main_category_fragment"
+        android:name="com.webronin_26.shopping.category.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/category_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/main_information_fragment"
+        android:name="com.webronin_26.shopping.information.InformationFragment"
+        android:label="information_fragment"
+        tools:layout="@layout/information_fragment" >
+    </fragment>
+
+    <activity
+        android:id="@+id/queryActivity"
+        android:name="com.webronin_26.shopping.query.QueryActivity"
+        android:label="QueryActivity" />
+
+    <activity
+        android:id="@+id/searchActivity"
+        android:name="com.webronin_26.shopping.search.SearchActivity"
+        android:label="SearchActivity" />
+
+</navigation>

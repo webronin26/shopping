@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.webronin_26.shopping.category.CategoryViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".category.CategoryFragment"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_girl_wear_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_girl_wear_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="女生衣著"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_boy_wear_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_boy_wear_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="男生衣著"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_makeup_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_makeup_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="美妝保養"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_phone_pad_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_phone_pad_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="手機與平板"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_computer_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_computer_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="3c與筆電"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_baby_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_baby_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="嬰幼童與母親"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_girl_accessories_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_girl_accessories_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="女性配件"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_boy_accessories_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_boy_accessories_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="男性配件"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_girl_shoes_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_girl_shoes_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="女鞋"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_boy_shoes_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_boy_shoes_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="男鞋"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_indoor_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_indoor_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="居家生活"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/category_pet_linear_layout" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/category_pet_picture"
+                        android:layout_margin="20dp"
+                        android:layout_weight="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="寵物"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

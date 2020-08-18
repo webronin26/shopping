@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.webronin_26.shopping.query.QueryViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#ffffff"
+            android:layout_weight="9">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffffff"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#4682B4"
+                        android:id="@+id/query_toolbar"/>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:id="@+id/query_image_view"
+                        app:picture="@{viewmodel.productPicture}"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="30sp"
+                        android:maxLines="3"
+                        android:textColor="#000000"
+                        android:id="@+id/query_name_text_view"
+                        app:set_text="@{viewmodel.productName}" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textColor="#CC0000"
+                        android:id="@+id/query_price_text_view"
+                        app:set_number="@{viewmodel.productPrice}" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:text="剩餘數量 ： "/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:id="@+id/query_number_text_view"
+                            app:set_number="@{viewmodel.productNumber}" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#AAAAAA"
+                        android:textSize="20sp"
+                        android:maxLines="10"
+                        android:id="@+id/query_info_text_view"
+                        app:set_text="@{viewmodel.productInfo}" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#ffffffff"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text=" + "
+                android:background="#ffffffff"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:id="@+id/query_plus_button"
+                android:onClick="@{() -> viewmodel.plusButtonClick()}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text=" 0 "
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:id="@+id/query_buy_number_text_view"
+                app:set_number="@{viewmodel.currentBuyNumber}" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text=" - "
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:background="#ffffffff"
+                android:id="@+id/query_minus_button"
+                android:onClick="@{() -> viewmodel.minusButtonClick()}" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="手刀購買"
+                android:background="#00BFFF"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                android:id="@+id/query_send_buy_request_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
