@@ -32,9 +32,9 @@ class QueryViewModel: ViewModel(), LifecycleObserver {
 
     private var maxBuy = MutableLiveData<Int>()
 
-    fun plusButtonClick() { if (maxBuy.value!! > currentBuyNumber.value!!) { currentBuyNumber.value!! + 1 } }
+    fun plusButtonClick() { if (maxBuy.value!! > currentBuyNumber.value!!) { currentBuyNumber.value = currentBuyNumber.value!! + 1 } }
 
-    fun minusButtonClick() { if (currentBuyNumber.value!! > 0) { currentBuyNumber.value!! - 1 } }
+    fun minusButtonClick() { if (currentBuyNumber.value!! > 0) { currentBuyNumber.value = currentBuyNumber.value!! - 1 } }
 
     fun setData(intent: Intent) {
         productName.value = intent.getStringExtra("name")
